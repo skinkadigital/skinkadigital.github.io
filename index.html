@@ -1,1 +1,212 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>DOMINION TANG.FUN</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f5f0e5;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #3b2d12;
+      background: #0d0d0d;
+    }
+    .logo {
+      color: #d8b45a;
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    nav a:hover { color: #e2bd63; }
+    .hero {
+      min-height: 390px;
+      padding: 90px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(ellipse at 75% 35%, #60471855, transparent 55%),
+        linear-gradient(110deg, #111, #080808);
+      border-bottom: 1px solid #493719;
+    }
+    .eyebrow {
+      color: #d8b45a;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 1.05;
+      margin: 18px 0;
+      max-width: 750px;
+    }
+    h1 span { color: #d8b45a; }
+    .hero p { color: #bdb7a9; max-width: 520px; line-height: 1.7; }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 24px;
+      width: fit-content;
+      color: #111;
+      background: linear-gradient(120deg, #f1d78b, #b58a35);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+    main { padding: 38px 7%; }
+    .section-title {
+      color: #e0bd69;
+      font-size: 21px;
+      margin: 0 0 20px;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 13px;
+      margin-bottom: 42px;
+    }
+    .category {
+      padding: 23px 12px;
+      text-align: center;
+      border: 1px solid #4b3919;
+      background: linear-gradient(145deg, #191713, #0d0d0d);
+      color: #e8d7ad;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .category:hover {
+      border-color: #d8b45a;
+      background: #211b10;
+    }
+    .search {
+      width: 100%;
+      max-width: 480px;
+      padding: 14px;
+      margin: 0 0 22px;
+      border: 1px solid #51401f;
+      border-radius: 3px;
+      background: #111;
+      color: white;
+      font-size: 15px;
+    }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+    }
+    .item {
+      min-height: 130px;
+      padding: 20px;
+      border: 1px solid #302719;
+      border-radius: 4px;
+      background: linear-gradient(145deg, #191919, #101010);
+    }
+    .item small { color: #d8b45a; letter-spacing: 2px; }
+    .item h3 { margin-bottom: 8px; }
+    .item p { color: #aaa; font-size: 13px; line-height: 1.5; }
+    footer {
+      padding: 28px 7%;
+      margin-top: 55px;
+      border-top: 1px solid #3b2d12;
+      color: #8e887b;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DOMINION <span>TANG.FUN</span></div>
+    <nav>
+      <a href="#inicio">INÍCIO</a>
+      <a href="#categorias">CATEGORIAS</a>
+      <a href="#catalogo">CATÁLOGO</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="eyebrow">ENTRETENIMENTO PREMIUM</div>
+    <h1>SEU MUNDO.<br><span>SEU DOMÍNIO.</span></h1>
+    <p>Um universo de entretenimento em um só lugar. Explore filmes, séries, canais ao vivo e novidades.</p>
+    <a class="button" href="#categorias">EXPLORAR CONTEÚDO</a>
+  </section>
+
+  <main>
+    <h2 class="section-title" id="categorias">EXPLORE POR CATEGORIA</h2>
+    <div class="categories">
+      <a class="category" href="#catalogo">▶ TV AO VIVO</a>
+      <a class="category" href="#catalogo">FILMES</a>
+      <a class="category" href="#catalogo">SÉRIES</a>
+      <a class="category" href="#catalogo">DESTAQUES</a>
+      <a class="category" href="#catalogo">FAVORITOS</a>
+      <a class="category" href="#catalogo">NOVIDADES</a>
+    </div>
+
+    <h2 class="section-title" id="catalogo">DESTAQUES DO DOMINION</h2>
+    <input class="search" id="search" type="search"
+      placeholder="Pesquisar no catálogo..." aria-label="Pesquisar catálogo">
+
+    <div class="catalog" id="items">
+      <article class="item">
+        <small>TV AO VIVO</small>
+        <h3>Canais ao vivo</h3>
+        <p>Área reservada para suas fontes autorizadas de transmissão.</p>
+      </article>
+      <article class="item">
+        <small>FILMES</small>
+        <h3>Cinema</h3>
+        <p>Espaço para adicionar seus filmes e respectivas fontes autorizadas.</p>
+      </article>
+      <article class="item">
+        <small>SÉRIES</small>
+        <h3>Séries</h3>
+        <p>Organize temporadas e episódios em seu catálogo.</p>
+      </article>
+      <article class="item">
+        <small>NOVIDADES</small>
+        <h3>Em breve</h3>
+        <p>Novos conteúdos serão apresentados aqui.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    DOMINION TANG.FUN · ENTRETENIMENTO PREMIUM<br><br>
+    Conteúdos e transmissões dependem de fontes e direitos de acesso autorizados.
+  </footer>
+
+  <script>
+    const search = document.getElementById("search");
+    const items = document.querySelectorAll(".item");
+
+    search.addEventListener("input", () => {
+      const term = search.value.toLowerCase();
+      items.forEach(item => {
+        item.style.display =
+          item.textContent.toLowerCase().includes(term) ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
+
